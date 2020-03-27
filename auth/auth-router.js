@@ -16,8 +16,7 @@ router.post("/register", (req, res) => {
     .then(user => {
       res.status(201).json(user);
     })
-    .then(err => {
-      console.log(err);
+    .catch(err => {
       res.status(500).json({
         message: "failed to register user",
         error: err
@@ -34,7 +33,7 @@ router.post("/login", (req, res) => {
       if (user && bcrypt.compareSync(password, user.password)) {
         const token = generateToken(user);
         res.status(200).json({
-          Welcome: user.password,
+          Welcome: user.username,
           token
         });
       } else {
@@ -56,7 +55,7 @@ function generateToken(user) {
   };
 
   const options = {
-    expiresIn: "1h"
+    expiresIn: "3h"
   };
   return jwt.sign(payload, jwtSecret, options);
 }
