@@ -40,11 +40,19 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 - [ ] What is the purpose of using _sessions_?
 
+    you can send sessions in cookies to make sure that the session is open for the users authentication.
+
 - [ ] What does bcrypt do to help us store passwords in a secure manner.
+
+    bcrypt is an encrypter that allows to mask sensitive information that you dont want to be shown in the event of a hack.
 
 - [ ] What does bcrypt do to slow down attackers?
 
+    it makes the process more time consuming the more rounds you put the password through!
+
 - [ ] What are the three parts of the JSON Web Token?
+
+    the three parts are the header, payload and verification signature
 
 ## Minimum Viable Product
 
